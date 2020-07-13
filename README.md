@@ -10,10 +10,7 @@ OR
 
 public class YourBean<A<B>> extends JsonSerializeHandler<A<B>> {}
 
-
-
 MyBatisTypeHandler config  
-
 
 <resultMap id="BeanMapId" type="YourPath">  
         

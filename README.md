@@ -5,10 +5,10 @@ Usage:
 
 public class YourBean&lt;A&gt; {  
 　　private A&lt;B&gt; a;  
-　　public void setA(A a)  {  
+　　public void setA(A&lt;B&gt; a)  {  
 　　　　this.a = a;  
 　　}  
-　　public A getA()  {  
+　　public A&lt;B&gt; getA()  {  
 　　　　return this.a;  
 　　}  
 }  

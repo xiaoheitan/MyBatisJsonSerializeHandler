@@ -11,7 +11,7 @@ public class YourBean&lt;A&lt;B&gt;&gt; extends JsonSerializeHandler&lt;A&lt;B&g
 
 MyBatisTypeHandler config  
 
-<&lt;resultMap id="BeanMapId" type="YourPath"&gt;  
-        &lt;result column="yourColumnName" property="yourPropertyName" typeHandler="YourBeanPath"/&gt;
+&lt;resultMap id="BeanMapId" type="YourPath"&gt;  
+        &lt;result column="yourColumnName" property="yourPropertyName" typeHandler="YourBeanPath"/&gt;  
 &lt;/resultMap&gt;
 

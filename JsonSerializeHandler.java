@@ -1,11 +1,3 @@
-/*
- *    Copyright(c)2002-2019, 成都房猫有限公司
- *    项目名称:fm-framework
- *    文件名称:JsonSerializeHandler.java
- *    Date:2020/5/6 下午3:37
- *    Author:JingFei
- */
-
 package com.fm.pp.dal.sql.mappers.handler;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -40,7 +32,7 @@ public abstract class JsonSerializeHandler<T> extends BaseTypeHandler<T> {
             ParameterizedType parameterizedType = (ParameterizedType) type;
             javaType = this.generateJavaType(parameterizedType);
         } else {
-            throw new UnsupportedOperationException("不支持该类型");
+            throw new UnsupportedOperationException("The type is not supported");
         }
     }
 
@@ -55,7 +47,7 @@ public abstract class JsonSerializeHandler<T> extends BaseTypeHandler<T> {
             } else if (type instanceof ParameterizedType) {
                 javaTypeList[i] = this.generateJavaType((ParameterizedType) type);
             } else {
-                throw new UnsupportedOperationException("不支持该类型");
+                throw new UnsupportedOperationException("The type is not supported");
             }
         }
 
@@ -84,7 +76,7 @@ public abstract class JsonSerializeHandler<T> extends BaseTypeHandler<T> {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            throw new AssertionError("反序列化出错:");
+            throw new AssertionError("Error in deserialization");
         }
         return null;
     }
@@ -95,7 +87,7 @@ public abstract class JsonSerializeHandler<T> extends BaseTypeHandler<T> {
             return  MAPPER.readValue(resultSet.getString(i), javaType);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new AssertionError("反序列化出错:");
+            throw new AssertionError("Error in deserialization");
         }
     }
 
@@ -105,7 +97,7 @@ public abstract class JsonSerializeHandler<T> extends BaseTypeHandler<T> {
             return  MAPPER.readValue(callableStatement.getString(i), javaType);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new AssertionError("反序列化出错:");
+            throw new AssertionError("Error in deserialization");
         }
     }
 }

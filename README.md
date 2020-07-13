@@ -12,6 +12,6 @@ public class YourBean<A<B>> extends JsonSerializeHandler<A<B>> {}
 
 MyBatisTypeHandler config
 
- <resultMap id="BeanMapId" type="YourPath">
+<resultMap id="BeanMapId" type="YourPath">
         <result column="yourColumnName" property="yourPropertyName" typeHandler="YourBeanPath"/>
- </resultMap>
+</resultMap>
